@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🤖 AI Productivity Dashboard</h1>
+  
+<div class="container">
+
+    <input type="text" id="taskInput" placeholder="Enter your task">
+    <button onclick="addTask()">Add Task</button>
+<h2>📊 Task Analytics</h2>
+<canvas id="taskChart"></canvas>
+    <h2>📊 Progress</h2>
+    <progress id="progressBar" value="0" max="100"></progress>
+    <p id="progressText">0% completed</p>
+    <div class="task-breakdown">
+
+    <div>
+        <h3>✅ Completed Tasks</h3>
+        <ul id="completedList"></ul>
+    </div>
+
+    <div>
+        <h3>⏳ Pending Tasks</h3>
+        <ul id="pendingList"></ul>
+    </div>
+
+</div>
+
+    <h2>📋 Tasks</h2>
+    <ul id="taskList"></ul>
+
+    <h2>🧠 AI Suggestion</h2>
+   
+    <p id="aiText">Start adding tasks...</p>
+
+    <div class="stats">
+        <p>Total Tasks: <span id="total">0</span></p>
+        <p>Completed: <span id="done">0</span></p>
+        <p>Pending: <span id="pending">0</span></p>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
