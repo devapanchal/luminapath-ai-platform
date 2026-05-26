@@ -1,0 +1,23 @@
+FROM node:20-alpine AS deps
+WORKDIR /app
+COPY package*.json ./
+COPY frontend/package.json frontend/package.json
+RUN npm install --workspace frontend
+
+FROM node:20-alpine AS build
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/frontend/node_modules ./frontend/node_modules
+COPY frontend ./frontend
+WORKDIR /app/frontend
+RUN npm run build
+
+FROM node:20-alpine AS runtime
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --from=build /app/frontend/.next ./.next
+COPY --from=build /app/frontend/public ./public
+COPY --from=build /app/frontend/package.json ./package.json
+COPY --from=deps /app/frontend/node_modules ./node_modules
+EXPOSE 3000
+CMD ["npm", "run", "start"]

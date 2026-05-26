@@ -1,41 +1,31 @@
 {
-  "name": "ai-dashboard-react",
-  "version": "0.1.0",
+  "name": "luminapath-ai-learning-platform",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^13.5.0",
-    "chart.js": "^4.5.1",
-    "react": "^18.3.1",
-    "react-chartjs-2": "^5.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "description": "Original AI-powered learning platform built with Next.js, Express, PostgreSQL, Redis, Cloudinary, and OpenAI.",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "concurrently \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "start": "npm run start --workspace backend",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "check": "npm run check --workspaces --if-present",
+    "install:all": "npm install"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "overrides": {
+    "postcss": "^8.5.10",
+    "next": {
+      "postcss": "^8.5.10"
+    }
+  },
+  "engines": {
+    "node": ">=18.18.0"
   }
 }
