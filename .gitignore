@@ -4,6 +4,8 @@ build/
 .next/
 frontend/.next/
 frontend-dev*.log
+*tunnel*.log
+*cloudflare*.log
 *.tsbuildinfo
 .env
 .env.local
