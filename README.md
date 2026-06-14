@@ -4,17 +4,9 @@ LuminaPath AI is an original AI-powered learning platform for students, instruct
 
 This project uses the referenced ApexQuest repository only as feature inspiration. The architecture, folder structure, product identity, UI system, database model, and implementation are new.
 
-## Project Identity
+## Product Identity
 
-Generated name options:
-
-1. LuminaPath AI
-2. SkillHarbor
-3. CortexTrail Academy
-4. NovaMentor LMS
-5. PathWise Learning
-
-Selected brand: **LuminaPath AI**
+Brand: **LuminaPath AI**
 
 Logo concept: an open horizon path crossing a luminous neural node, representing guided mastery with adaptive AI coaching.
 
@@ -75,7 +67,7 @@ docs/            Deployment and API notes
 - DevOps: Docker, Docker Compose, GitHub Actions CI.
 - Testing: Jest and Supertest.
 
-## Local Setup
+## Quick Start
 
 ```bash
 npm install
@@ -88,6 +80,8 @@ npm run dev
 
 Frontend: [http://localhost:3000](http://localhost:3000)  
 Backend: [http://localhost:8080/health](http://localhost:8080/health)
+
+## Local Setup
 
 Demo credentials:
 
