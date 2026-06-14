@@ -4,6 +4,13 @@ LuminaPath AI is an original AI-powered learning platform for students, instruct
 
 This project uses the referenced ApexQuest repository only as feature inspiration. The architecture, folder structure, product identity, UI system, database model, and implementation are new.
 
+## Live Demo
+
+- Frontend demo: [https://devapanchal.github.io/luminapath-ai-platform/](https://devapanchal.github.io/luminapath-ai-platform/)
+- Repository: [https://github.com/devapanchal/luminapath-ai-platform](https://github.com/devapanchal/luminapath-ai-platform)
+
+The GitHub Pages demo publishes the polished frontend experience from this repository. Backend-powered workflows such as auth, persistence, AI generation, and admin data APIs still require a deployed API, PostgreSQL, Redis, and environment secrets.
+
 ## Product Identity
 
 Brand: **LuminaPath AI**
@@ -185,6 +192,13 @@ Frontend:
 2. Set root/base directory to `frontend`.
 3. Set `NEXT_PUBLIC_API_URL` to the deployed backend URL plus `/api`.
 4. Build command: `npm run build`
+
+GitHub Pages demo:
+
+1. Push to `main`.
+2. GitHub Actions runs `.github/workflows/pages.yml`.
+3. The workflow exports the `frontend` app as a static demo and publishes it to GitHub Pages.
+4. Demo URL: `https://devapanchal.github.io/luminapath-ai-platform/`
 
 Backend:
 

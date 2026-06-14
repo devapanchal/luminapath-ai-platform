@@ -2,7 +2,9 @@ node_modules/
 dist/
 build/
 .next/
+out/
 frontend/.next/
+frontend/out/
 frontend-dev*.log
 *tunnel*.log
 *cloudflare*.log

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Bell, CheckCircle2, PlayCircle, Search } from "lucide-react";
+import Link from "next/link";
 import { aiStudio, courses, differentiators, identity, navItems, roleCards } from "@/lib/product";
 import { LearningRhythmChart, SkillHeatmapChart } from "./Charts";
 import { Logo } from "./Logo";
@@ -22,9 +23,9 @@ export function AppFrame() {
           </div>
           <div className="flex items-center gap-2">
             <ThemeToggle />
-            <a className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-bold text-white shadow-panel transition hover:-translate-y-0.5 dark:bg-white dark:text-night sm:inline-flex" href="/dashboard">
+            <Link className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-bold text-white shadow-panel transition hover:-translate-y-0.5 dark:bg-white dark:text-night sm:inline-flex" href="/dashboard">
               Open dashboard
-            </a>
+            </Link>
           </div>
         </nav>
       </header>
@@ -41,12 +42,12 @@ export function AppFrame() {
             A role-aware learning operating system for adaptive courses, career roadmaps, ATS resume analysis, voice tutoring, collaborative study rooms, and skill mastery analytics.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a className="inline-flex items-center gap-2 rounded-full bg-aurora px-6 py-3 font-bold text-night shadow-glow transition hover:-translate-y-1" href="/ai-lab">
+            <Link className="inline-flex items-center gap-2 rounded-full bg-aurora px-6 py-3 font-bold text-night shadow-glow transition hover:-translate-y-1" href="/ai-lab">
               Launch AI studio <ArrowRight size={18} />
-            </a>
-            <a className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/70 px-6 py-3 font-bold text-ink backdrop-blur transition hover:-translate-y-1 dark:border-white/15 dark:bg-white/10 dark:text-white" href="/courses">
+            </Link>
+            <Link className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/70 px-6 py-3 font-bold text-ink backdrop-blur transition hover:-translate-y-1 dark:border-white/15 dark:bg-white/10 dark:text-white" href="/courses">
               <PlayCircle size={18} /> Explore courses
-            </a>
+            </Link>
           </div>
           <div className="mt-10 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
             {identity.palette.map((color) => (
